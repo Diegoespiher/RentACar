@@ -113,7 +113,7 @@ public class vehiculo {
                 + "anio=" + anio + ", color=" + color + ", "
                 + "cilindrada=" + cilindrada + ", combustible=" + combustible 
                 + ", pasajeros=" + pasajeros + ", precio=" + precio + ", "
-                + "extras=" + extras + '}';
+                + "extras=" + extras + '}'+"\n";
     }
     
 }
