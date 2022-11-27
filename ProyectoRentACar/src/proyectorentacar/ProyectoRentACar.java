@@ -6,15 +6,14 @@ package proyectorentacar;
 
 /**
  *
- * @author Luis Diego
+ * @author Luis Diego & Esteban
  */
 public class ProyectoRentACar {
 
-    /**
-     * @param args the command line arguments
-     */
+   
     public static void main(String[] args) {
-        // TODO code application logic here
+        //Main
+        
     }
     
 }
