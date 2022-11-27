@@ -5,6 +5,8 @@
  */
 package proyectorentacar;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author EAAV
@@ -37,7 +39,85 @@ public class Lista {
         }
         ultimo.setNext(cabeza);
         cabeza.setBack(ultimo); 
-    }    
+    }
+public void modifica (vehiculo p) {
+        if (cabeza != null) {
+            Nodo aux = cabeza;
+            
+            while (aux != null && aux.getDato().getPlaca() != p.getPlaca()) {
+                aux = aux. getNext ();
+            }
+            
+            if (aux != null && aux. getDato () .getPlaca () == p.getPlaca ()){
+                aux.getDato().setMarca(p.getMarca()); 
+                aux.getDato().setAnio(p.getAnio()) ;
+                aux.getDato().setColor(p.getColor()) ;
+                aux.getDato().setCilindrada(p.getCilindrada()) ;
+                aux.getDato().setCombustible(p.getCombustible()) ;
+                aux.getDato().setPasajeros(p.getPasajeros()) ;
+                aux.getDato().setPrecio(p.getPrecio()) ;
+                aux.getDato().setExtras(p.getExtras()) ;
+            }
+        }
+    } 
+    
+    public void elimina (String placa) {
+        
+        if (cabeza != null) { 
+            if (cabeza.getDato().getPlaca() == placa) 
+            {
+                cabeza = cabeza.getNext();
+            } 
+            else {
+                Nodo aux = cabeza; 
+                
+                while (aux. getNext () != null &&
+                    aux.getNext () .getDato () .getPlaca() != placa) {
+                    aux = aux.getNext () ;
+                }
+                
+               
+                if (aux.getNext () != null &&
+                aux.getNext () .getDato () .getPlaca () == placa) {
+                    aux. setNext (aux.getNext () .getNext ());
+                }
+            }
+        }
+    }
+    public void consultar (Lista lista){
+        while(true){
+            int option =Integer.parseInt(JOptionPane.showInputDialog("**MENU DE "
+                + "CONSULTA**\n 1. Consultar lista completa \n 2. "
+                + "Consultar por número de placa \n 3. "+ "Salir "
+                + "\n ->Ingrese la "
+                + "opción que desea: "));
+            switch(option){
+                case 1:
+                    System.out.println("-----------------lista de vehiculos-----------------");
+                    System.out.println(lista);
+                    System.out.println("----------------------------------------------------");
+                    break;
+                case 2:
+                    String placa = JOptionPane.showInputDialog("Digite el "
+                            + "numero de placa que desea consultar: ");
+                    if (cabeza != null) { //Si hay algo en la lista buscarlo
+            Nodo aux = cabeza;
+            while (aux. getNext () != null &&
+                    aux.getNext () .getDato () .getPlaca() != placa) {
+                    aux = aux.getNext () ;
+                }if (aux.getNext () != null &&
+                aux.getNext () .getDato () .getPlaca () == placa) {
+                    System.out.println(aux.getNext()); //cambio las referencias
+                }
+                    }
+            break;
+                case 3:
+                System.out.println();
+                break;
+            }
+        }
+        
+    }
     @Override
     public String toString(){
         Nodo aux = cabeza;
