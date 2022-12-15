@@ -12,6 +12,7 @@ package proyectorentacar;
 public class vehiculo {
     private String placa;
     private String marca;
+    private String modelo;
     private int anio;
     private String color;
     private String cilindrada;
@@ -19,12 +20,14 @@ public class vehiculo {
     private int pasajeros;
     private int precio;
     private String extras;
+    private String asociado;
 
-    public vehiculo(String placa, String marca, int anio, String color, 
-            String cilindrada, String combustible, int pasajeros, int precio, 
-            String extras) {
+    public vehiculo(String placa, String marca, String modelo, int anio,
+            String color, String cilindrada, String combustible, 
+            int pasajeros, int precio, String extras, String asociado) {
         this.placa = placa;
         this.marca = marca;
+        this.modelo = modelo;
         this.anio = anio;
         this.color = color;
         this.cilindrada = cilindrada;
@@ -32,7 +35,17 @@ public class vehiculo {
         this.pasajeros = pasajeros;
         this.precio = precio;
         this.extras = extras;
+        this.asociado = asociado;
     }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+ 
     public vehiculo(){}
 
     public String getPlaca() {
@@ -105,6 +118,14 @@ public class vehiculo {
 
     public void setExtras(String extras) {
         this.extras = extras;
+    }
+
+    public void setAsociado(String asociado) {
+        this.asociado = asociado;
+    }
+
+    public String getAsociado() {
+        return asociado;
     }
 
     @Override
