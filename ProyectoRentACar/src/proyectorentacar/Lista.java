@@ -50,6 +50,7 @@ public void modifica (vehiculo p) {
             
             if (aux != null && aux. getDato () .getPlaca () == p.getPlaca ()){
                 aux.getDato().setMarca(p.getMarca()); 
+                aux.getDato().setModelo(p.getMarca());
                 aux.getDato().setAnio(p.getAnio()) ;
                 aux.getDato().setColor(p.getColor()) ;
                 aux.getDato().setCilindrada(p.getCilindrada()) ;
@@ -57,6 +58,7 @@ public void modifica (vehiculo p) {
                 aux.getDato().setPasajeros(p.getPasajeros()) ;
                 aux.getDato().setPrecio(p.getPrecio()) ;
                 aux.getDato().setExtras(p.getExtras()) ;
+                aux.getDato().setAsociado(p.getAsociado()) ;
             }
         }
     } 
