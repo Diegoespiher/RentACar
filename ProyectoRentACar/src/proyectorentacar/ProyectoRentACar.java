@@ -183,10 +183,10 @@ public class ProyectoRentACar {
                             "Cedula del Cliente: "));
                     if (laLista.existe2(cedula7)){
                         if (listaS.search2()){
-                            laLista.elimina(cedula7);
-                        }else {
                             JOptionPane.showMessageDialog(null, "No se puede "
                                     + "eliminar, cliente tiene pendientes");
+                        }else {
+                            laLista.elimina(cedula7);
                         }
                     }else {
                         JOptionPane.showMessageDialog(null, "Cedula de cliente "
@@ -194,7 +194,6 @@ public class ProyectoRentACar {
                     }
                     break;
                 case 8:
-
                     //BUsqueda inicial por cedula cliente
                     int cedulaA = Integer.parseInt(JOptionPane.showInputDialog(
                             "Cedula del Cliente: "));
@@ -203,7 +202,7 @@ public class ProyectoRentACar {
                     //ingreso de datos de solicitud y vehiculo deseado
                     int dias = Integer.parseInt(JOptionPane.showInputDialog(
                             "Cantidad de dias que se alquilará el vehiculo: "));
-                    lista1.consultar(lista1);
+                    //lista1.consultar(lista1);
                     int pasajeros = Integer.parseInt(JOptionPane.showInputDialog(
                             "Cantidad de pasajeros: "));
                     String marcaA = JOptionPane.showInputDialog("Marca del "
