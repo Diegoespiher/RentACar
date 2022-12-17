@@ -6,10 +6,15 @@ package proyectorentacar;
 
 /**
  *
- * @author frank
+ * @author EAAV
  */
 public class Solicitud {
+<<<<<<< Updated upstream
     //private vehiculo dato;
+=======
+
+    
+>>>>>>> Stashed changes
     private cliente datoC;
     private int dias;
     private int anio;
@@ -20,6 +25,7 @@ public class Solicitud {
     private String extras;
     private int anioVehiculo;
     private String estado;
+    private vehiculo dato;
 
     public Solicitud(cliente datoC, int dias, int anio, int mes, int dia, String marca, String modelo, String extras, int anioVehiculo) {
         this.datoC = datoC;
@@ -116,5 +122,25 @@ public class Solicitud {
     public void setEstado(String estado) {
         this.estado = estado;
     }
+<<<<<<< Updated upstream
     
+=======
+
+    public void setDatoV(vehiculo datoV) {
+        this.datoV = datoV;
+    }
+
+    public vehiculo getDatoV() {
+        return datoV;
+    }
+
+    public void setDato(vehiculo dato) {
+        this.dato = dato;
+    }
+
+    public vehiculo getDato() {
+        return dato;
+    }
+
+>>>>>>> Stashed changes
 }

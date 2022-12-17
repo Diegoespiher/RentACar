@@ -11,6 +11,7 @@ package proyectorentacar;
 public class alquilar {
     private vehiculo dato;
     private cliente datoC;
+    private Solicitud datoS;
     private int dias;
     private int anio;
     private int mes;
