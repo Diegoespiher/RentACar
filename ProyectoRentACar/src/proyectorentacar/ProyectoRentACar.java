@@ -97,13 +97,12 @@ public class ProyectoRentACar {
                             precioM, extrasM, estadoM));
                     break;
                 case 3:
-                    while (true) {
+                    //while (true) {
                         int option3 = Integer.parseInt(JOptionPane.showInputDialog(
                                 "**MENU DE "
                                 + "CONSULTA**\n 1. Consultar lista completa \n "
                                         + "2. "
-                                + "Consultar por número de placa \n 3. " + 
-                                        "Salir "
+                                + "Consultar por número de placa \n"
                                 + "\n ->Ingrese la "
                                 + "opción que desea: "));
                         switch (option3) {
@@ -116,13 +115,12 @@ public class ProyectoRentACar {
                                                 + "desea consultar:"
                                         + " "));
                                 JOptionPane.showMessageDialog(null, "Lista de"
-                                        + " vehiculoespecifica \n "+ 
+                                        + " vehiculo especifica \n "+ 
                                         lista1.existe(placa3));
-                                lista1.existe(placa3);
+                                //lista1.existe(placa3);
                                 break;
-                        }}
-                                //break;
-                        
+                        }
+                        break;
                 case 4:
                     int cedula = Integer.parseInt(JOptionPane.showInputDialog(
                             "Cedula del Cliente: "));
@@ -152,15 +150,30 @@ public class ProyectoRentACar {
                             correoM, categoriaM));
                     break;
                 case 6:
-                    JOptionPane.showMessageDialog(null, laLista);
-                    int cedula6 = Integer.parseInt(JOptionPane.showInputDialog(
-                            "Cedula del Cliente: "));
-                    //Incompleto!!
-                    //mostar toda la informcación del mismo, alquilres realizados (mostrar la 
-                    //fecha numero de placa y cantidad de dias del alquiler
-                    //JOptionPane.showMessageDialog(null,laLista.extrae(cedula6));
-                    //orden cronologoico (más antiguo al más reciente)
-                    break;
+                    //while (true) {
+                        int option6 = Integer.parseInt(JOptionPane.showInputDialog(
+                                "**MENU DE "
+                                + "CONSULTA**\n 1. Consultar lista completa \n "
+                                        + "2. "
+                                + "Consultar por número de ID \n "
+                                + "\n ->Ingrese la "
+                                + "opción que desea: "));
+                        switch (option6) {
+                            case 1:
+                                JOptionPane.showMessageDialog(null, laLista);
+                                break;
+                            case 2:
+                                int ID6 = Integer.parseInt(JOptionPane.showInputDialog(
+                                        "Digite el numero de ID que "
+                                                + "desea consultar:"
+                                        + " "));
+                                laLista.existe(ID6);
+                                JOptionPane.showMessageDialog(null, "Lista de"
+                                        + " CLIENTES especifica \n "+ 
+                                        laLista.existe(ID6));
+                                break;
+                        }
+                        break;
                 case 7:
                     JOptionPane.showMessageDialog(null, laLista);
                     int cedula7 = Integer.parseInt(JOptionPane.showInputDialog(
