@@ -187,6 +187,8 @@ public class ProyectoRentACar {
                     //BUsqueda inicial por cedula cliente
                     int cedulaA = Integer.parseInt(JOptionPane.showInputDialog(
                             "Cedula del Cliente: "));
+                    int placaS = Integer.parseInt(JOptionPane.showInputDialog(
+                            "Placa de vehiculo a rentar: "));
                     //ingreso de datos de solicitud y vehiculo deseado
                     int dias = Integer.parseInt(JOptionPane.showInputDialog(
                             "Cantidad de dias que se alquilará el vehiculo: "));
@@ -224,9 +226,11 @@ public class ProyectoRentACar {
                     //hay que buscar carro por los demás atributos no por placa
                     //String estado="";
                     cliente clienteA = laLista.existe(cedulaA);
+                    vehiculo vehiculoA = lista1.existe(placaS);
                     // int placaA = Integer.parseInt(JOptionPane.showInputDialog("Numero "
                     // + "de placa del vehiculo que desea alquilar Vehiculo: "));
-                    listaS.inserta(new Solicitud(clienteA, dias, anioA, mes,
+                    listaS.push(new Solicitud(clienteA, vehiculoA, dias, 
+                            anioA, mes,
                             dia, marcaA, modeloA, extrasA, anioV, estadoA));
                     break;
                 case 9:

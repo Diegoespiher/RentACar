@@ -12,6 +12,7 @@ public class Solicitud {
 
     //private vehiculo dato;
     private cliente datoC;
+    private vehiculo datoV;
     private int dias;
     private int anio;
     private int mes;
@@ -22,10 +23,12 @@ public class Solicitud {
     private int anioVehiculo;
     private String estado;
 
-    public Solicitud(cliente datoC, int dias, int anio, int mes, int dia,
+    public Solicitud(cliente datoC, vehiculo datoV, int dias, int anio,
+            int mes, int dia,
             String marca, String modelo, String extras, int anioVehiculo,
             String estado) {
         this.datoC = datoC;
+        this.datoV = datoV;
         this.dias = dias;
         this.anio = anio;
         this.mes = mes;
@@ -115,6 +118,14 @@ public class Solicitud {
 
     public void setEstado(String estado) {
         this.estado = estado;
+    }
+
+    public void setDatoV(vehiculo datoV) {
+        this.datoV = datoV;
+    }
+
+    public vehiculo getDatoV() {
+        return datoV;
     }
 
 }
