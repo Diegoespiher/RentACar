@@ -20,11 +20,11 @@ public class vehiculo {
     private int pasajeros;
     private int precio;
     private String extras;
-    private String asociado;
+    private String estado;
 
     public vehiculo(String placa, String marca, String modelo, int anio,
             String color, String cilindrada, String combustible, 
-            int pasajeros, int precio, String extras, String asociado) {
+            int pasajeros, int precio, String extras, String estado) {
         this.placa = placa;
         this.marca = marca;
         this.modelo = modelo;
@@ -35,7 +35,7 @@ public class vehiculo {
         this.pasajeros = pasajeros;
         this.precio = precio;
         this.extras = extras;
-        this.asociado = asociado;
+        this.estado = estado;
     }
 
     public void setModelo(String modelo) {
@@ -120,12 +120,12 @@ public class vehiculo {
         this.extras = extras;
     }
 
-    public void setAsociado(String asociado) {
-        this.asociado = asociado;
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
-    public String getAsociado() {
-        return asociado;
+    public String getEstado() {
+        return estado;
     }
 
     @Override

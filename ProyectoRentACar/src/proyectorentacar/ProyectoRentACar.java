@@ -4,6 +4,7 @@
  */
 package proyectorentacar;
 
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -17,6 +18,8 @@ public class ProyectoRentACar {
         //Main
         listaCliente laLista = new listaCliente();
         Lista lista1 = new Lista();
+        
+        
         
         while (true) {
             int option = Integer.parseInt(JOptionPane.showInputDialog("**MENU "
@@ -43,7 +46,7 @@ public class ProyectoRentACar {
                             + "Vehiculo: ");
                     String modelo = JOptionPane.showInputDialog("Modelo del "
                             + "Vehiculo: ");
-                    int año = Integer.parseInt(JOptionPane.showInputDialog("Año "
+                    int anio = Integer.parseInt(JOptionPane.showInputDialog("Año "
                             + "del Vehiculo: "));
                     String color = JOptionPane.showInputDialog("Color del "
                             + "Vehiculo: ");
@@ -60,7 +63,7 @@ public class ProyectoRentACar {
                     String asociado = JOptionPane.showInputDialog(""
                             + "Asociado del Vehiculo (Disponible, Alquilado,"
                             + " En reparación, Fuera de circulación): ");
-                    lista1.inserta(new vehiculo(placa, marca, modelo, año, color,
+                    lista1.inserta(new vehiculo(placa, marca, modelo, anio, color,
                             cilindrada, combustible, capacidad, precio,
                             extras, asociado));
                     break;
@@ -71,7 +74,7 @@ public class ProyectoRentACar {
                             + "Vehiculo: ");
                     String modeloM = JOptionPane.showInputDialog("Modelo del "
                             + "Vehiculo: ");
-                    int añoM = Integer.parseInt(JOptionPane.showInputDialog("Año "
+                    int anioM = Integer.parseInt(JOptionPane.showInputDialog("Año "
                             + "del Vehiculo: "));
                     String colorM = JOptionPane.showInputDialog("Color del "
                             + "Vehiculo: ");
@@ -85,17 +88,19 @@ public class ProyectoRentACar {
                             "Precio del Vehiculo: "));
                     String extrasM = JOptionPane.showInputDialog(""
                             + "Extras del Vehiculo: ");
-                    String asociadoM = JOptionPane.showInputDialog(""
-                            + "Asociado del Vehiculo (Disponible, Alquilado,"
+                    String estadoM = JOptionPane.showInputDialog(""
+                            + "Estado del Vehiculo (Disponible, Alquilado,"
                             + " En reparación, Fuera de circulación): ");
-                    lista1.modifica(new vehiculo(placaM, marcaM, modeloM, añoM,
+                    lista1.modifica(new vehiculo(placaM, marcaM, modeloM, anioM,
                             colorM,cilindradaM, combustibleM, capacidadM, 
-                            precioM, extrasM, asociadoM));
+                            precioM, extrasM, estadoM));
                     break;
                 case 3:
                     String placaC = JOptionPane.showInputDialog(
                             "Placa del Vehiculo: ");
-                    //consulta....incompleto
+                    //consulta....incompleto el progama debe dar la opcion de 
+                    //ver todos ls carros o ver uno en especifico
+                   
                     break;
                 case 4:
                     int cedula = Integer.parseInt(JOptionPane.showInputDialog(
@@ -142,7 +147,32 @@ public class ProyectoRentACar {
                     //preguntar si tiene alquileres pendientes y si no, aplicar codgo de extrae.
                     break;
                 case 8:
-                    
+                    int cedulaA = Integer.parseInt(JOptionPane.showInputDialog(
+                            "Cedula del Cliente: "));
+                    int dias = Integer.parseInt(JOptionPane.showInputDialog(
+                            "Cantidad de dias que se alquilará el vehiculo: "));
+                     int pasajeros = Integer.parseInt(JOptionPane.showInputDialog(
+                            "Cantidad de pasajeros: "));
+                     String marcaA = JOptionPane.showInputDialog("Marca del "
+                            + "Vehiculo: ");
+                    String modeloA = JOptionPane.showInputDialog("Modelo del "
+                            + "Vehiculo: ");
+                    int anioA = Integer.parseInt(JOptionPane.showInputDialog("Año "
+                            + "del Vehiculo: "));
+                    String extrasA = JOptionPane.showInputDialog(""
+                            + "Extras del Vehiculo: ");
+                    if(dias>=30){
+                        //buscar cliente por cedula 
+                        String cat = laLista.buscar(cedulaA).getCategoria;
+                        if(cat== "plata"){
+                            laLista.buscar(cedulaA).setCategoria="oro";
+                        }else if(cat == "oro"){
+                            laLista.buscar(cedulaA).setCategoria="zafiro";
+                        }else {
+                            laLista.buscar(cedulaA).setCategoria="plata";
+                        }
+                    }
+        
                     break;
                 case 9:
                     
