@@ -14,7 +14,7 @@ public class cliente {
     private String nacimiento;
     private String correo;
     private String categoria;
-    private int opcion;
+   // private int opcion;
 
     public cliente(int Id, String nombre, String nacimiento, 
             String correo, String categoria) {
