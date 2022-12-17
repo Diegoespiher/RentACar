@@ -6,11 +6,10 @@ package proyectorentacar;
 
 /**
  *
- * @author frank
+ * @author EAAV
  */
-public class Solicitud {
+public class Solicitud {    
 
-    //private vehiculo dato;
     private cliente datoC;
     private vehiculo datoV;
     private int dias;
@@ -22,6 +21,7 @@ public class Solicitud {
     private String extras;
     private int anioVehiculo;
     private String estado;
+    private vehiculo dato;
 
     public Solicitud(cliente datoC, vehiculo datoV, int dias, int anio,
             int mes, int dia,
@@ -120,6 +120,7 @@ public class Solicitud {
         this.estado = estado;
     }
 
+
     public void setDatoV(vehiculo datoV) {
         this.datoV = datoV;
     }
@@ -127,5 +128,15 @@ public class Solicitud {
     public vehiculo getDatoV() {
         return datoV;
     }
+
+
+    public void setDato(vehiculo dato) {
+        this.dato = dato;
+    }
+
+    public vehiculo getDato() {
+        return dato;
+    }
+
 
 }
