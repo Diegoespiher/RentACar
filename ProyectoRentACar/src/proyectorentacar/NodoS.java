@@ -9,9 +9,12 @@ package proyectorentacar;
  * @author frank
  */
 public class NodoS {
+
     private Solicitud dato;
-        private NodoS next;
- private NodoS back;
+    private NodoS next;
+
+    private NodoS back;
+
     public NodoS(Solicitud dato) {
         this.dato = dato;
     }
@@ -40,9 +43,8 @@ public class NodoS {
         return next;
     }
 
-
     @Override
     public String toString() {
-        return  dato + " ";
+        return dato + " ";
     }
 }
