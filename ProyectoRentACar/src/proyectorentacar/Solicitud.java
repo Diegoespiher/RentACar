@@ -9,7 +9,7 @@ package proyectorentacar;
  * @author frank
  */
 public class Solicitud {
-    private vehiculo dato;
+    //private vehiculo dato;
     private cliente datoC;
     private int dias;
     private int anio;
@@ -18,12 +18,10 @@ public class Solicitud {
     private String marca;
     private String modelo;
     private String extras;
-    private String anioVehiculo;
+    private int anioVehiculo;
     private String estado;
 
-    public Solicitud(vehiculo dato, cliente datoC, int dias, int anio, int mes,
-            int dia, String marca, String modelo, String anioVehiculo) {
-        this.dato = dato;
+    public Solicitud(cliente datoC, int dias, int anio, int mes, int dia, String marca, String modelo, String extras, int anioVehiculo) {
         this.datoC = datoC;
         this.dias = dias;
         this.anio = anio;
@@ -31,13 +29,13 @@ public class Solicitud {
         this.dia = dia;
         this.marca = marca;
         this.modelo = modelo;
+        this.extras = extras;
         this.anioVehiculo = anioVehiculo;
     }
 
-    public vehiculo getDato() {
-        return dato;
-    }
+   
 
+    
     public cliente getDatoC() {
         return datoC;
     }
@@ -66,13 +64,10 @@ public class Solicitud {
         return modelo;
     }
 
-    public String getAnioVehiculo() {
+    public int getAnioVehiculo() {
         return anioVehiculo;
     }
 
-    public void setDato(vehiculo dato) {
-        this.dato = dato;
-    }
 
     public void setDatoC(cliente datoC) {
         this.datoC = datoC;
@@ -102,7 +97,7 @@ public class Solicitud {
         this.modelo = modelo;
     }
 
-    public void setAnioVehiculo(String anioVehiculo) {
+    public void setAnioVehiculo(int anioVehiculo) {
         this.anioVehiculo = anioVehiculo;
     }
 
