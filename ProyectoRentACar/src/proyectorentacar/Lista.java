@@ -58,7 +58,7 @@ public void modifica (vehiculo p) {
                 aux.getDato().setPasajeros(p.getPasajeros()) ;
                 aux.getDato().setPrecio(p.getPrecio()) ;
                 aux.getDato().setExtras(p.getExtras()) ;
-                aux.getDato().setAsociado(p.getAsociado()) ;
+                aux.getDato().setEstado(p.getEstado()) ;
             }
         }
     } 

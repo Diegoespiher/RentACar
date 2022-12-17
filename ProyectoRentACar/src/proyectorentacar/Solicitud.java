@@ -6,10 +6,10 @@ package proyectorentacar;
 
 /**
  *
- * @author Luis Diego
+ * @author frank
  */
-public class alquilar {
-    private vehiculo dato;
+public class Solicitud {
+        private vehiculo dato;
     private cliente datoC;
     private int dias;
     private int anio;
@@ -20,7 +20,7 @@ public class alquilar {
     private String extras;
     private String anioVehiculo;
 
-    public alquilar(vehiculo dato, cliente datoC, int dias, int anio, int mes,
+    public Solicitud(vehiculo dato, cliente datoC, int dias, int anio, int mes,
             int dia, String marca, String modelo, String anioVehiculo) {
         this.dato = dato;
         this.datoC = datoC;
