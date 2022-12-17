@@ -39,6 +39,7 @@ public class listaSolicitud {
         ultimo.setNext(cabeza);
         cabeza.setBack(ultimo); 
     }
+    
 
     
     @Override

@@ -181,12 +181,14 @@ public class ProyectoRentACar {
                     //preguntar si tiene alquileres pendientes y si no, aplicar codgo de extrae.
                     break;
                 case 8:
+                    
                     //BUsqueda inicial por cedula cliente
                     int cedulaA = Integer.parseInt(JOptionPane.showInputDialog(
                             "Cedula del Cliente: "));
                     //ingreso de datos de solicitud y vehiculo deseado
                     int dias = Integer.parseInt(JOptionPane.showInputDialog(
                             "Cantidad de dias que se alquilará el vehiculo: "));
+                    lista1.consultar(lista1);
                      int pasajeros = Integer.parseInt(JOptionPane.showInputDialog(
                             "Cantidad de pasajeros: "));
                      String marcaA = JOptionPane.showInputDialog("Marca del "
@@ -216,9 +218,16 @@ public class ProyectoRentACar {
                             laLista.existe(cedulaA).setCategoria("plata");
                         }
                     }
-                     listaS.inserta(new Solicitud(vehiculo,cliente, dias,anio,mes dia,marca,modelo,extras,anioV,estado));   
+                    //hay que buscar carro por los demás atributos no por placa
+                    String estado="";
+                    cliente clienteA = laLista.existe(cedulaA);
+                   // int placaA = Integer.parseInt(JOptionPane.showInputDialog("Numero "
+                          // + "de placa del vehiculo que desea alquilar Vehiculo: "));
+                     listaS.inserta(new Solicitud(clienteA, dias,anioA,mes dia,marcaA,modeloA,extrasA,anioV,estado)); 
+                    
                     break;
                 case 9:
+                    //registrar el alquiler o rechazarlo
                     
                     break;
                 case 10:
