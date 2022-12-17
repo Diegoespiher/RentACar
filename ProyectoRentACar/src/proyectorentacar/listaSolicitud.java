@@ -39,7 +39,19 @@ public class listaSolicitud {
         ultimo.setNext(cabeza);
         cabeza.setBack(ultimo); 
     }
-    
+    public Solicitud existe(int id) {
+        cliente esta2 = null;
+        if (cabeza != null) {
+            NodoS aux = cabeza;
+
+            while (aux != null && aux.getDato().getId() < id) {
+                aux = aux.getNext();
+            }
+            if (aux != null && aux.getDato().getId() == id) {
+                esta2 = aux.getDato();
+            }
+        }
+        return esta2;
 
     
     @Override
