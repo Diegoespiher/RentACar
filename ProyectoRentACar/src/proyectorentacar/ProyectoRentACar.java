@@ -207,16 +207,16 @@ public class ProyectoRentACar {
                     
                     if(dias>=30){
                         //buscar cliente por cedula 
-                        String cat = laLista.existe(cedulaA).getCategoria;
+                        String cat = laLista.existe(cedulaA).getCategoria();
                         if(cat== "plata"){
-                            laLista.existe(cedulaA).setCategoria="oro";
+                            laLista.existe(cedulaA).setCategoria("oro");
                         }else if(cat == "oro"){
-                            laLista.existe(cedulaA).setCategoria="zafiro";
+                            laLista.existe(cedulaA).setCategoria("zafiro");
                         }else {
-                            laLista.existe(cedulaA).setCategoria="plata";
+                            laLista.existe(cedulaA).setCategoria("plata");
                         }
                     }
-                     listaS.inserta(p);nserta(new Solicitud(vehiculo,cliente, dias,anio,mes dia,marca,modelo,extras,anioV,estado));   
+                     listaS.inserta(new Solicitud(vehiculo,cliente, dias,anio,mes dia,marca,modelo,extras,anioV,estado));   
                     break;
                 case 9:
                     
