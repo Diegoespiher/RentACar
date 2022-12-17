@@ -180,7 +180,17 @@ public class ProyectoRentACar {
                     JOptionPane.showMessageDialog(null, laLista);
                     int cedula7 = Integer.parseInt(JOptionPane.showInputDialog(
                             "Cedula del Cliente: "));
-                    //preguntar si tiene alquileres pendientes y si no, aplicar codgo de extrae.
+                    if (laLista.existe2(cedula7)){
+                        if (listaS.search2(estadoM){
+                            laLista.elimina(cedula7);
+                        }else {
+                            JOptionPane.showMessageDialog(null, "No se puede "
+                                    + "eliminar, cliente tiene pendientes");
+                        }
+                    }else {
+                        JOptionPane.showMessageDialog(null, "Cedula de cliente "
+                                + "no registrada");
+                    }
                     break;
                 case 8:
 

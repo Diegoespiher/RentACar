@@ -47,6 +47,19 @@ public class listaCliente {
         }
         return esta2;
     }
+    
+    public boolean existe2(int id) {
+        boolean esta3 = false;
+        if (cabeza != null) {
+            nodoCliente aux = cabeza;
+
+            while (aux != null && aux.getDato().getId() < id) {
+                aux = aux.getNext();
+            }
+            esta3 = (aux != null && aux.getDato().getId() == id);
+        }
+        return esta3;
+    }
 
     
     public void modifica (cliente p) {
