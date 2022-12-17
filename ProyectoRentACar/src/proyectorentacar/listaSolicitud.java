@@ -73,7 +73,7 @@ public class listaSolicitud {
         return exist;
     }
     
-    public boolean search2(String estado) {
+    public boolean search2() {
         // Crea una copia de la pila.
         NodoS aux = cima;
         // Bandera para verificar si exist el elemento a search.
@@ -82,7 +82,7 @@ public class listaSolicitud {
         // de la pila.
         while (exist2 != true && aux != null) {
             // Compara si el value del node es igual que al de reference.
-            if (estado == aux.getDato().getEstado()) {
+            if ("Registrado" == aux.getDato().getEstado()) {
                 // Cambia el value de la bandera.
                 exist2 = true;
             } else {
