@@ -19,9 +19,7 @@ public class ProyectoRentACar {
         listaCliente laLista = new listaCliente();
         Lista lista1 = new Lista();
         listaSolicitud listaS = new listaSolicitud();
-        
-        
-        
+
         while (true) {
             int option = Integer.parseInt(JOptionPane.showInputDialog("**MENU "
                     + "DEL "
@@ -47,7 +45,8 @@ public class ProyectoRentACar {
                             + "Vehiculo: ");
                     String modelo = JOptionPane.showInputDialog("Modelo del "
                             + "Vehiculo: ");
-                    int anio = Integer.parseInt(JOptionPane.showInputDialog("Año "
+                    int anio = Integer.parseInt(JOptionPane.showInputDialog(
+                            "Año "
                             + "del Vehiculo: "));
                     String color = JOptionPane.showInputDialog("Color del "
                             + "Vehiculo: ");
@@ -64,7 +63,8 @@ public class ProyectoRentACar {
                     String asociado = JOptionPane.showInputDialog(""
                             + "Asociado del Vehiculo (Disponible, Alquilado,"
                             + " En reparación, Fuera de circulación): ");
-                    lista1.inserta(new vehiculo(placa, marca, modelo, anio, color,
+                    lista1.inserta(new vehiculo(placa, marca, modelo, anio,
+                            color,
                             cilindrada, combustible, capacidad, precio,
                             extras, asociado));
                     break;
@@ -75,11 +75,13 @@ public class ProyectoRentACar {
                             + "Vehiculo: ");
                     String modeloM = JOptionPane.showInputDialog("Modelo del "
                             + "Vehiculo: ");
-                    int anioM = Integer.parseInt(JOptionPane.showInputDialog("Año "
+                    int anioM = Integer.parseInt(JOptionPane.showInputDialog(
+                            "Año "
                             + "del Vehiculo: "));
                     String colorM = JOptionPane.showInputDialog("Color del "
                             + "Vehiculo: ");
-                    String cilindradaM = JOptionPane.showInputDialog("Cilindrada"
+                    String cilindradaM = JOptionPane.showInputDialog(
+                            "Cilindrada"
                             + " del Vehiculo: ");
                     String combustibleM = JOptionPane.showInputDialog(""
                             + "Combustibles del Vehiculo: ");
@@ -93,34 +95,34 @@ public class ProyectoRentACar {
                             + "Estado del Vehiculo (Disponible, Alquilado,"
                             + " En reparación, Fuera de circulación): ");
                     lista1.modifica(new vehiculo(placaM, marcaM, modeloM, anioM,
-                            colorM,cilindradaM, combustibleM, capacidadM, 
+                            colorM, cilindradaM, combustibleM, capacidadM,
                             precioM, extrasM, estadoM));
                     break;
                 case 3:
                     //while (true) {
-                        int option3 = Integer.parseInt(JOptionPane.showInputDialog(
-                                "**MENU DE "
-                                + "CONSULTA**\n 1. Consultar lista completa \n "
-                                        + "2. "
-                                + "Consultar por número de placa \n"
-                                + "\n ->Ingrese la "
-                                + "opción que desea: "));
-                        switch (option3) {
-                            case 1:
-                                JOptionPane.showMessageDialog(null, lista1);
-                                break;
-                            case 2:
-                                int placa3 = Integer.parseInt(JOptionPane.showInputDialog(
-                                        "Digite el numero de placa que "
-                                                + "desea consultar:"
-                                        + " "));
-                                JOptionPane.showMessageDialog(null, "Lista de"
-                                        + " vehiculo especifica \n "+ 
-                                        lista1.existe(placa3));
-                                //lista1.existe(placa3);
-                                break;
-                        }
-                        break;
+                    int option3 = Integer.parseInt(JOptionPane.showInputDialog(
+                            "**MENU DE "
+                            + "CONSULTA**\n 1. Consultar lista completa \n "
+                            + "2. "
+                            + "Consultar por número de placa \n"
+                            + "\n ->Ingrese la "
+                            + "opción que desea: "));
+                    switch (option3) {
+                        case 1:
+                            JOptionPane.showMessageDialog(null, lista1);
+                            break;
+                        case 2:
+                            int placa3 = Integer.parseInt(JOptionPane.showInputDialog(
+                                    "Digite el numero de placa que "
+                                    + "desea consultar:"
+                                    + " "));
+                            JOptionPane.showMessageDialog(null, "Lista de"
+                                    + " vehiculo especifica \n "
+                                    + lista1.existe(placa3));
+                            //lista1.existe(placa3);
+                            break;
+                    }
+                    break;
                 case 4:
                     int cedula = Integer.parseInt(JOptionPane.showInputDialog(
                             "Cedula del Cliente: "));
@@ -132,7 +134,7 @@ public class ProyectoRentACar {
                             + "Cliente: ");
                     String categoria = JOptionPane.showInputDialog("Categoria"
                             + " del Cliente (Bronce, Plata, Oro, Zafiro): ");
-                    laLista.inserta(new cliente(cedula, nombre, nacimiento, 
+                    laLista.inserta(new cliente(cedula, nombre, nacimiento,
                             correo, categoria));
                     break;
                 case 5:
@@ -146,52 +148,64 @@ public class ProyectoRentACar {
                             + "Cliente: ");
                     String categoriaM = JOptionPane.showInputDialog("Categoria"
                             + " del Cliente (Bronce, Plata, Oro, Zafiro): ");
-                    laLista.modifica(new cliente(cedulaM, nombreM, nacimientoM, 
+                    laLista.modifica(new cliente(cedulaM, nombreM, nacimientoM,
                             correoM, categoriaM));
                     break;
                 case 6:
                     //while (true) {
-                        int option6 = Integer.parseInt(JOptionPane.showInputDialog(
-                                "**MENU DE "
-                                + "CONSULTA**\n 1. Consultar lista completa \n "
-                                        + "2. "
-                                + "Consultar por número de ID \n "
-                                + "\n ->Ingrese la "
-                                + "opción que desea: "));
-                        switch (option6) {
-                            case 1:
-                                JOptionPane.showMessageDialog(null, laLista);
-                                break;
-                            case 2:
-                                int ID6 = Integer.parseInt(JOptionPane.showInputDialog(
-                                        "Digite el numero de ID que "
-                                                + "desea consultar:"
-                                        + " "));
-                                laLista.existe(ID6);
-                                JOptionPane.showMessageDialog(null, "Lista de"
-                                        + " CLIENTES especifica \n "+ 
-                                        laLista.existe(ID6));
-                                break;
-                        }
-                        break;
+                    int option6 = Integer.parseInt(JOptionPane.showInputDialog(
+                            "**MENU DE "
+                            + "CONSULTA**\n 1. Consultar lista completa \n "
+                            + "2. "
+                            + "Consultar por número de ID \n "
+                            + "\n ->Ingrese la "
+                            + "opción que desea: "));
+                    switch (option6) {
+                        case 1:
+                            JOptionPane.showMessageDialog(null, laLista);
+                            break;
+                        case 2:
+                            int ID6 = Integer.parseInt(JOptionPane.showInputDialog(
+                                    "Digite el numero de ID que "
+                                    + "desea consultar:"
+                                    + " "));
+                            laLista.existe(ID6);
+                            JOptionPane.showMessageDialog(null, "Lista de"
+                                    + " CLIENTES especifica \n "
+                                    + laLista.existe(ID6));
+                            break;
+                    }
+                    break;
                 case 7:
                     JOptionPane.showMessageDialog(null, laLista);
                     int cedula7 = Integer.parseInt(JOptionPane.showInputDialog(
                             "Cedula del Cliente: "));
-                    //preguntar si tiene alquileres pendientes y si no, aplicar codgo de extrae.
+                    if (laLista.existe2(cedula7)){
+                        if (listaS.search2(estadoM){
+                            laLista.elimina(cedula7);
+                        }else {
+                            JOptionPane.showMessageDialog(null, "No se puede "
+                                    + "eliminar, cliente tiene pendientes");
+                        }
+                    }else {
+                        JOptionPane.showMessageDialog(null, "Cedula de cliente "
+                                + "no registrada");
+                    }
                     break;
                 case 8:
-                    
+
                     //BUsqueda inicial por cedula cliente
                     int cedulaA = Integer.parseInt(JOptionPane.showInputDialog(
                             "Cedula del Cliente: "));
+                    int placaS = Integer.parseInt(JOptionPane.showInputDialog(
+                            "Placa de vehiculo a rentar: "));
                     //ingreso de datos de solicitud y vehiculo deseado
                     int dias = Integer.parseInt(JOptionPane.showInputDialog(
                             "Cantidad de dias que se alquilará el vehiculo: "));
                     lista1.consultar(lista1);
-                     int pasajeros = Integer.parseInt(JOptionPane.showInputDialog(
+                    int pasajeros = Integer.parseInt(JOptionPane.showInputDialog(
                             "Cantidad de pasajeros: "));
-                     String marcaA = JOptionPane.showInputDialog("Marca del "
+                    String marcaA = JOptionPane.showInputDialog("Marca del "
                             + "Vehiculo: ");
                     String modeloA = JOptionPane.showInputDialog("Modelo del "
                             + "Vehiculo: ");
@@ -202,92 +216,50 @@ public class ProyectoRentACar {
                     //fecha de reservacion
                     int anioA = Integer.parseInt(JOptionPane.showInputDialog(
                             "Año en qué se alquilará el vehiculo: "));
-                     int mes = Integer.parseInt(JOptionPane.showInputDialog(
+                    int mes = Integer.parseInt(JOptionPane.showInputDialog(
                             "Mes en qué se alquilará el vehiculo: "));
-                     int dia= Integer.parseInt(JOptionPane.showInputDialog(
+                    int dia = Integer.parseInt(JOptionPane.showInputDialog(
                             "Día en qué se alquilará el vehiculo: "));
-                    
-                    if(dias>=30){
+                    String estadoA = JOptionPane.showInputDialog("Estado del "
+                            + "Vehiculo: ");
+                    if (dias >= 30) {
                         //buscar cliente por cedula 
                         String cat = laLista.existe(cedulaA).getCategoria();
-                        if(cat== "plata"){
+                        if (cat == "plata") {
                             laLista.existe(cedulaA).setCategoria("oro");
-                        }else if(cat == "oro"){
+                        } else if (cat == "oro") {
                             laLista.existe(cedulaA).setCategoria("zafiro");
-                        }else {
+                        } else {
                             laLista.existe(cedulaA).setCategoria("plata");
                         }
                     }
                     //hay que buscar carro por los demás atributos no por placa
                     //String estado="";
                     cliente clienteA = laLista.existe(cedulaA);
-                   // int placaA = Integer.parseInt(JOptionPane.showInputDialog("Numero "
-                          // + "de placa del vehiculo que desea alquilar Vehiculo: "));
-                     listaS.inserta(new Solicitud(clienteA, dias,anioA,mes,dia,marcaA,modeloA,extrasA,anioV)); 
-                    listaS.
+                    vehiculo vehiculoA = lista1.existe(placaS);
+                    // int placaA = Integer.parseInt(JOptionPane.showInputDialog("Numero "
+                    // + "de placa del vehiculo que desea alquilar Vehiculo: "));
+                    listaS.push(new Solicitud(clienteA, vehiculoA, dias, 
+                            anioA, mes,
+                            dia, marcaA, modeloA, extrasA, anioV, estadoA));
                     break;
                 case 9:
                     //registrar el alquiler o rechazarlo
-                    
+
                     break;
                 case 10:
-                    
+
                     break;
                 case 11:
-                    
+
                     break;
                 case 12:
-                    
+
                     break;
                 case 13:
                     System.exit(0);
             }
-                        
-        
-        
-        
-        //System.out.println("--------------------------------------ESPI----------------------------------------------");
-        //listaCliente laLista = new listaCliente();
-        //laLista.inserta(new cliente(22, "Juan", "Juan", "Juan", "Juan"));
-        ///laLista.inserta(new cliente(11, "Juan", "Juan", "Juan", "Juan"));
-        ///laLista.inserta(new cliente(15, "Juan", "Juan", "Juan", "Juan"));
-        ///laLista.inserta(new cliente(66, "Juan", "Juan", "Juan", "Juan"));
-        //laLista.inserta(new cliente(75, "Juan", "Juan", "Juan", "Juan"));
-       
+        }
 
-        // System.out.println(laLista.extrae(30).getNombre());
-        // laLista.elimina(5);
-        // System.out.println("Existe? "+laLista.existe(20));
-        //System.out.println(laLista);
-
-        //System.out.println("-------Modificada------");
-
-        //laLista.modifica(new cliente(15, "Didier", "uno", "uno", "uno"));
-        // laLista.modifica(new Persona(15, 65));
-        //System.out.println(laLista);
-        //System.out.println("-------Elimina------");
-        //laLista.elimina(15);
-        //System.out.println(laLista);
-        //laLista.extrae(5);
-        //System.out.println("-------Extrae------");
-        //System.out.println(laLista.extrae(75));
-        //System.out.println("--------------------------------------EAAV----------------------------------------------");
-        //Lista lista = new Lista();
-        //lista.inserta(new vehiculo("GHD-456", "Ferrari", 2000, "Rojo", 
-         //   "6000cc", "Gasolina", 2, 500000, "extras"));
-        
-       // System.out.println(lista);
-        //System.out.println("-------Modificada------");
-        //lista.modifica(new vehiculo("XXXXX", "XXXXXX", 111111, "XXXXX", 
-        //    "XXXXXXXX", "XXXXXXXXX", 1, 111111111, "XXXXXX"));
-        //System.out.println("-------Elimina------");
-        //System.out.println("GHD-555");
-        //lista.elimina("GHD-555");
-        //System.out.println(lista);
-        //lista.consultar(lista);
-        //System.out.println("----------------------------------------------------------------------------------------");
     }
-        
-        
-    }
-    }
+}

@@ -9,8 +9,9 @@ package proyectorentacar;
  * @author Luis Diego
  */
 public class nodoCliente {
+
     private cliente dato;
-        private nodoCliente next;
+    private nodoCliente next;
 
     public nodoCliente(cliente dato) {
         this.dato = dato;
@@ -32,10 +33,9 @@ public class nodoCliente {
         return next;
     }
 
-
     @Override
     public String toString() {
-        return  dato + " ";
+        return dato + " ";
     }
-    
+
 }

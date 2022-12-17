@@ -9,19 +9,17 @@ package proyectorentacar;
  * @author frank
  */
 public class NodoS {
+
     private Solicitud dato;
-        private NodoS next;
- private NodoS back;
+    private NodoS next;
+
+    public NodoS() {
+        this.dato = null;
+        this.next = null;
+    }
+
     public NodoS(Solicitud dato) {
         this.dato = dato;
-    }
-
-    public void setBack(NodoS back) {
-        this.back = back;
-    }
-
-    public NodoS getBack() {
-        return back;
     }
 
     public void setDato(Solicitud dato) {
@@ -40,9 +38,8 @@ public class NodoS {
         return next;
     }
 
-
     @Override
     public String toString() {
-        return  dato + " ";
+        return dato + " ";
     }
 }
