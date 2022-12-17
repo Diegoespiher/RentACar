@@ -219,12 +219,12 @@ public class ProyectoRentACar {
                         }
                     }
                     //hay que buscar carro por los demás atributos no por placa
-                    String estado="";
+                    //String estado="";
                     cliente clienteA = laLista.existe(cedulaA);
                    // int placaA = Integer.parseInt(JOptionPane.showInputDialog("Numero "
                           // + "de placa del vehiculo que desea alquilar Vehiculo: "));
-                     listaS.inserta(new Solicitud(clienteA, dias,anioA,mes dia,marcaA,modeloA,extrasA,anioV,estado)); 
-                    
+                     listaS.inserta(new Solicitud(clienteA, dias,anioA,mes,dia,marcaA,modeloA,extrasA,anioV)); 
+                    listaS.
                     break;
                 case 9:
                     //registrar el alquiler o rechazarlo
