@@ -63,7 +63,7 @@ public void modifica (vehiculo p) {
         }
     } 
     
-    public void elimina (String placa) {
+    public void elimina (int placa) {
         
         if (cabeza != null) { 
             if (cabeza.getDato().getPlaca() == placa) 
@@ -100,26 +100,55 @@ public void modifica (vehiculo p) {
                     System.out.println("----------------------------------------------------");
                     break;
                 case 2:
-                    String placa = JOptionPane.showInputDialog("Digite el "
-                            + "numero de placa que desea consultar: ");
+                    int placa = Integer.parseInt(JOptionPane.showInputDialog("Digite el "
+                            + "numero de placa que desea consultar: "));
                     if (cabeza != null) { //Si hay algo en la lista buscarlo
-            Nodo aux = cabeza;
-            while (aux. getNext () != null &&
-                    aux.getNext () .getDato () .getPlaca() != placa) {
-                    aux = aux.getNext () ;
-                }if (aux.getNext () != null &&
-                aux.getNext () .getDato () .getPlaca () == placa) {
-                    System.out.println(aux.getNext()); //cambio las referencias
-                }
+                        Nodo aux = cabeza;
+                        while (aux.getNext() != null
+                                && aux.getNext().getDato().getPlaca() != placa) {
+                            aux = aux.getNext();
+                        }
+                        if (aux.getNext() != null
+                                && aux.getNext().getDato().getPlaca() == placa) {
+                            System.out.println(aux.getNext()); //cambio las referencias
+                        }
                     }
-            break;
+                    break;
                 case 3:
-                System.out.println();
-                break;
+                    System.exit(0);
+                    break;
             }
         }
         
     }
+    
+    public vehiculo existe(int id) {
+        vehiculo esta = null;
+        int j=0;
+        // Busca en lista, y retorna true si una persona tiene el id
+        // en la lista
+        if (cabeza != null) {
+            // Si hay algo en la lista buscaré
+            Nodo aux = cabeza;
+            // utilizo aux como indice
+
+            // Mientras no se acabe la lista y el elemento
+            // de la lista sea menor que el buscado
+            while (aux != null && aux.getDato().getPlaca() > id) {
+                aux = aux.getNext();// avanzo en la lista
+                j++;
+            }
+
+            // verdadero si lo encontró
+            if (aux != null && aux.getDato().getPlaca() == id){
+                esta = aux.getDato();
+            }
+        }
+
+        return esta;
+    }
+
+    
     @Override
     public String toString(){
         Nodo aux = cabeza;

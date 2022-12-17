@@ -40,8 +40,8 @@ public class ProyectoRentACar {
                     + "opción que desea: "));
             switch (option) {
                 case 1:
-                    String placa = JOptionPane.showInputDialog(
-                            "Placa del Vehiculo: ");
+                    int placa = Integer.parseInt(JOptionPane.showInputDialog(
+                            "Placa del Vehiculo: "));
                     String marca = JOptionPane.showInputDialog("Marca del "
                             + "Vehiculo: ");
                     String modelo = JOptionPane.showInputDialog("Modelo del "
@@ -68,8 +68,8 @@ public class ProyectoRentACar {
                             extras, asociado));
                     break;
                 case 2:
-                    String placaM = JOptionPane.showInputDialog(
-                            "Placa del Vehiculo: ");
+                    int placaM = Integer.parseInt(JOptionPane.showInputDialog(
+                            "Placa del Vehiculo: "));
                     String marcaM = JOptionPane.showInputDialog("Marca del "
                             + "Vehiculo: ");
                     String modeloM = JOptionPane.showInputDialog("Modelo del "
@@ -96,12 +96,32 @@ public class ProyectoRentACar {
                             precioM, extrasM, estadoM));
                     break;
                 case 3:
-                    String placaC = JOptionPane.showInputDialog(
-                            "Placa del Vehiculo: ");
-                    //consulta....incompleto el progama debe dar la opcion de 
-                    //ver todos ls carros o ver uno en especifico
-                   
-                    break;
+                    while (true) {
+                        int option3 = Integer.parseInt(JOptionPane.showInputDialog(
+                                "**MENU DE "
+                                + "CONSULTA**\n 1. Consultar lista completa \n "
+                                        + "2. "
+                                + "Consultar por número de placa \n 3. " + 
+                                        "Salir "
+                                + "\n ->Ingrese la "
+                                + "opción que desea: "));
+                        switch (option3) {
+                            case 1:
+                                JOptionPane.showMessageDialog(null, lista1);
+                                break;
+                            case 2:
+                                int placa3 = Integer.parseInt(JOptionPane.showInputDialog(
+                                        "Digite el numero de placa que "
+                                                + "desea consultar:"
+                                        + " "));
+                                JOptionPane.showMessageDialog(null, "Lista de"
+                                        + " vehiculoespecifica \n "+ 
+                                        lista1.existe(placa3));
+                                lista1.existe(placa3);
+                                break;
+                        }}
+                                //break;
+                        
                 case 4:
                     int cedula = Integer.parseInt(JOptionPane.showInputDialog(
                             "Cedula del Cliente: "));
@@ -189,6 +209,7 @@ public class ProyectoRentACar {
                 case 13:
                     System.exit(0);
             }
+                        
         
         
         

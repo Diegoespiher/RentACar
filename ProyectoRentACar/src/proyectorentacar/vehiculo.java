@@ -10,7 +10,7 @@ package proyectorentacar;
  * @author EAAV/////////////////////////////////////BORRAR//////////////////////////////////////////////////////////////
  */
 public class vehiculo {
-    private String placa;
+    private int placa;
     private String marca;
     private String modelo;
     private int anio;
@@ -22,7 +22,7 @@ public class vehiculo {
     private String extras;
     private String estado;
 
-    public vehiculo(String placa, String marca, String modelo, int anio,
+    public vehiculo(int placa, String marca, String modelo, int anio,
             String color, String cilindrada, String combustible, 
             int pasajeros, int precio, String extras, String estado) {
         this.placa = placa;
@@ -48,7 +48,7 @@ public class vehiculo {
  
     public vehiculo(){}
 
-    public String getPlaca() {
+    public int getPlaca() {
         return placa;
     }
 
@@ -84,7 +84,7 @@ public class vehiculo {
         return extras;
     }
 
-    public void setPlaca(String placa) {
+    public void setPlaca(int placa) {
         this.placa = placa;
     }
 
