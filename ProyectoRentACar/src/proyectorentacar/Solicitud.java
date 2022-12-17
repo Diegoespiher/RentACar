@@ -9,7 +9,7 @@ package proyectorentacar;
  * @author frank
  */
 public class Solicitud {
-        private vehiculo dato;
+    private vehiculo dato;
     private cliente datoC;
     private int dias;
     private int anio;
@@ -19,6 +19,7 @@ public class Solicitud {
     private String modelo;
     private String extras;
     private String anioVehiculo;
+    private String estado;
 
     public Solicitud(vehiculo dato, cliente datoC, int dias, int anio, int mes,
             int dia, String marca, String modelo, String anioVehiculo) {
@@ -103,6 +104,22 @@ public class Solicitud {
 
     public void setAnioVehiculo(String anioVehiculo) {
         this.anioVehiculo = anioVehiculo;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public String getExtras() {
+        return extras;
+    }
+
+    public void setExtras(String extras) {
+        this.extras = extras;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
     
 }

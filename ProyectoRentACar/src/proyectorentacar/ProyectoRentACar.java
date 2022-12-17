@@ -18,6 +18,7 @@ public class ProyectoRentACar {
         //Main
         listaCliente laLista = new listaCliente();
         Lista lista1 = new Lista();
+        listaSolicitud listaS = new listaSolicitud();
         
         
         
@@ -167,8 +168,10 @@ public class ProyectoRentACar {
                     //preguntar si tiene alquileres pendientes y si no, aplicar codgo de extrae.
                     break;
                 case 8:
+                    //BUsqueda inicial por cedula cliente
                     int cedulaA = Integer.parseInt(JOptionPane.showInputDialog(
                             "Cedula del Cliente: "));
+                    //ingreso de datos de solicitud y vehiculo deseado
                     int dias = Integer.parseInt(JOptionPane.showInputDialog(
                             "Cantidad de dias que se alquilará el vehiculo: "));
                      int pasajeros = Integer.parseInt(JOptionPane.showInputDialog(
@@ -177,22 +180,30 @@ public class ProyectoRentACar {
                             + "Vehiculo: ");
                     String modeloA = JOptionPane.showInputDialog("Modelo del "
                             + "Vehiculo: ");
-                    int anioA = Integer.parseInt(JOptionPane.showInputDialog("Año "
+                    int anioV = Integer.parseInt(JOptionPane.showInputDialog("Año "
                             + "del Vehiculo: "));
                     String extrasA = JOptionPane.showInputDialog(""
                             + "Extras del Vehiculo: ");
+                    //fecha de reservacion
+                    int anioA = Integer.parseInt(JOptionPane.showInputDialog(
+                            "Año en qué se alquilará el vehiculo: "));
+                     int mes = Integer.parseInt(JOptionPane.showInputDialog(
+                            "Mes en qué se alquilará el vehiculo: "));
+                     int dia= Integer.parseInt(JOptionPane.showInputDialog(
+                            "Día en qué se alquilará el vehiculo: "));
+                    
                     if(dias>=30){
                         //buscar cliente por cedula 
-                        String cat = laLista.buscar(cedulaA).getCategoria;
+                        String cat = laLista.existe(cedulaA).getCategoria;
                         if(cat== "plata"){
-                            laLista.buscar(cedulaA).setCategoria="oro";
+                            laLista.existe(cedulaA).setCategoria="oro";
                         }else if(cat == "oro"){
-                            laLista.buscar(cedulaA).setCategoria="zafiro";
+                            laLista.existe(cedulaA).setCategoria="zafiro";
                         }else {
-                            laLista.buscar(cedulaA).setCategoria="plata";
+                            laLista.existe(cedulaA).setCategoria="plata";
                         }
                     }
-        
+                     listaS.inserta(p);nserta(new Solicitud(vehiculo,cliente, dias,anio,mes dia,marca,modelo,extras,anioV,estado));   
                     break;
                 case 9:
                     
