@@ -19,6 +19,7 @@ public class ProyectoRentACar {
         listaCliente laLista = new listaCliente();
         Lista lista1 = new Lista();
         listaSolicitud listaS = new listaSolicitud();
+        
 
         while (true) {
             int option = Integer.parseInt(JOptionPane.showInputDialog("**MENU "
@@ -181,7 +182,7 @@ public class ProyectoRentACar {
                     int cedula7 = Integer.parseInt(JOptionPane.showInputDialog(
                             "Cedula del Cliente: "));
                     if (laLista.existe2(cedula7)){
-                        if (listaS.search2(estadoM){
+                        if (listaS.search2()){
                             laLista.elimina(cedula7);
                         }else {
                             JOptionPane.showMessageDialog(null, "No se puede "
